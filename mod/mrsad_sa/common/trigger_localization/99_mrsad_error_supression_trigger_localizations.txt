@@ -1,0 +1,45 @@
+﻿# Tenet/Doctrine Compatiblity
+incompatible_tenet_shared_hof_homosexuality_criminal_vs_celebrated = {
+	first_not = MRSAD_ERROR_SUPRESSION
+	third_not = MRSAD_ERROR_SUPRESSION
+}
+
+incompatible_tenet_shared_hof_deviancy_criminal_vs_celebrated = {
+	first_not = MRSAD_ERROR_SUPRESSION
+	third_not = MRSAD_ERROR_SUPRESSION
+}
+
+incompatible_tenet_shared_hof_adultery_men_criminal_vs_celebrated = {
+	first_not = MRSAD_ERROR_SUPRESSION
+	third_not = MRSAD_ERROR_SUPRESSION
+}
+
+incompatible_tenet_shared_hof_adultery_women_criminal_vs_celebrated = {
+	first_not = MRSAD_ERROR_SUPRESSION
+	third_not = MRSAD_ERROR_SUPRESSION
+}
+
+incompatible_tenet_shared_hof_adultery_criminal_vs_polyamory = {
+	first_not = MRSAD_ERROR_SUPRESSION
+	third_not = MRSAD_ERROR_SUPRESSION
+}
+
+incompatible_tenet_shared_hof_murder_acepted_vs_not = {
+	first_not = MRSAD_ERROR_SUPRESSION
+	third_not = MRSAD_ERROR_SUPRESSION
+}
+
+incompatible_tenet_shared_hof_witchcraft_criminal_vs_celebrated = {
+	first_not = MRSAD_ERROR_SUPRESSION
+	third_not = MRSAD_ERROR_SUPRESSION
+}
+
+incompatible_doctrine_murder_accepted_trigger = {
+	first_not = MRSAD_ERROR_SUPRESSION
+	third_not = MRSAD_ERROR_SUPRESSION
+}
+
+incompatible_doctrine_murder_celebrated_trigger = {
+	first_not = MRSAD_ERROR_SUPRESSION
+	third_not = MRSAD_ERROR_SUPRESSION
+}

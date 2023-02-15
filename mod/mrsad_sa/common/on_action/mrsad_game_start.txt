@@ -1,0 +1,15 @@
+﻿on_game_start = {
+    on_actions = {
+      on_mrsad_start
+    }
+}
+
+on_mrsad_start = {
+    effect = {
+        set_global_variable = {
+	    name = mrsad_is_loaded
+	    value = yes
+	}
+	mrsad_virtues_sins_setup_effect = yes
+    }
+}

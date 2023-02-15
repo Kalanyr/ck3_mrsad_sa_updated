@@ -1,0 +1,25 @@
+﻿namespace = mrsad_error_suppression
+
+mrsad_error_suppression.0001 = {
+	hidden = yes
+	trigger = {
+		exists = global_var:mrsad_is_loaded
+	}
+  	immediate = {
+		trigger_event = mrsad_error_suppression.0002
+  	}
+}
+
+mrsad_error_suppression.0002 = {
+	hidden = yes
+	immediate = {
+        	set_global_variable = {
+		    name = celebrate_crimes_is_loaded
+		    value = no
+		}
+		if = {
+			limit = {exists = global_var:celebrate_crimes_is_loaded}
+			trigger_event = mrsad_error_suppression.0001
+		}
+  	}
+}

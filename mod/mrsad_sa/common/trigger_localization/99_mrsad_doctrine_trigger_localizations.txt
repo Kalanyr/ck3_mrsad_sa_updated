@@ -1,0 +1,40 @@
+﻿doctrine_requires_virtue_trigger = {
+	first_not = DOCTRINE_REQUIRED_VIRTUE
+	third_not = DOCTRINE_REQUIRED_VIRTUE
+}
+
+doctrine_requires_sin_trigger = {
+	first_not = DOCTRINE_REQUIRED_SIN
+	third_not = DOCTRINE_REQUIRED_SIN
+}
+
+doctrine_incompatible_strong_virtue_trigger = {
+	first_not = DOCTRINE_INCOMPATIBLE_STRONG_VIRTUE
+	third_not = DOCTRINE_INCOMPATIBLE_STRONG_VIRTUE
+
+}
+
+doctrine_incompatible_strong_sin_trigger = {
+	first_not = DOCTRINE_INCOMPATIBLE_STRONG_SIN
+	third_not = DOCTRINE_INCOMPATIBLE_STRONG_SIN
+}
+
+doctrine_incompatible_weak_virtue_trigger = {
+	first_not = DOCTRINE_INCOMPATIBLE_WEAK_VIRTUE
+	third_not = DOCTRINE_INCOMPATIBLE_WEAK_VIRTUE
+}
+
+doctrine_incompatible_weak_sin_trigger = {
+	first_not = DOCTRINE_INCOMPATIBLE_WEAK_SIN
+	third_not = DOCTRINE_INCOMPATIBLE_WEAK_SIN
+}
+
+doctrine_requires_sequential_traits_sin_trigger = {
+	first_not = DOCTRINE_REQUIRED_SEQUENTIAL_TRAIT
+	third_not = DOCTRINE_REQUIRED_SEQUENTIAL_TRAIT
+}
+
+doctrine_requires_sequential_traits_virtue_trigger = {
+	first_not = DOCTRINE_REQUIRED_SEQUENTIAL_TRAIT
+	third_not = DOCTRINE_REQUIRED_SEQUENTIAL_TRAIT
+}

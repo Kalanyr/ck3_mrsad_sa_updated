@@ -1,0 +1,29 @@
+﻿cc_error_suppression = {
+	group = "cc_error_suppression"
+
+	is_available_on_create = {
+		always = no
+	}
+
+	doctrine_homosexuality_celebrated = {
+		# To be overwritten by Celebrate Crimes Mod
+	}
+	doctrine_deviancy_celebrated = {
+		# To be overwritten by Celebrate Crimes Mod
+	}
+	doctrine_adultery_men_celebrated = {
+		# To be overwritten by Celebrate Crimes Mod
+	}
+	doctrine_adultery_women_celebrated = {
+		# To be overwritten by Celebrate Crimes Mod
+	}
+	doctrine_murder_accepted = {
+		# To be overwritten by Celebrate Crimes Mod
+	}
+	doctrine_murder_celebrated = {
+		# To be overwritten by Celebrate Crimes Mod
+	}
+	doctrine_witchcraft_celebrated = {
+		# To be overwritten by Celebrate Crimes Mod
+	}
+}

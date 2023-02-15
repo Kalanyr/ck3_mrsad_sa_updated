@@ -1,0 +1,12 @@
+﻿l_english:
+
+ DOCTRINE_REQUIRED_VIRTUE:0 "Selection must already be an $doctrine_mrsad_virtues_name$ [doctrine|E]"
+ DOCTRINE_REQUIRED_SIN:0 "Selection must already be an $doctrine_mrsad_sins_name$ [doctrine|E]"
+
+ DOCTRINE_INCOMPATIBLE_STRONG_VIRTUE:0 "A Trait in selected Group is already an $doctrine_mrsad_virtues_name$ (Great) [doctrine|E]"
+ DOCTRINE_INCOMPATIBLE_STRONG_SIN:0 "A Trait in selected Group is already an Great $doctrine_mrsad_sins_name$ (Great) [doctrine|E]"
+ 
+ DOCTRINE_INCOMPATIBLE_WEAK_VIRTUE:0 "A Trait in selected Group is already an $doctrine_mrsad_virtues_name$ [doctrine|E]"
+ DOCTRINE_INCOMPATIBLE_WEAK_SIN:0 "A Trait in selected Group is already an $doctrine_mrsad_sins_name$ [doctrine|E]"
+ 
+ DOCTRINE_REQUIRED_SEQUENTIAL_TRAIT:0 "Traits from this Trait Group can only be selected sequentially"
