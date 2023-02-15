@@ -11,4 +11,4 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2871344570
 
 Uploads for Paradox Plaza can be found at:
 
-TBA
+https://mods.paradoxplaza.com/mods/57854/Any
