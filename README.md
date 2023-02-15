@@ -6,6 +6,7 @@ The focus was on fixing reported errors and bringing the UI up the the latest ve
 As a side effect Trait Groups can now be Virtues / Sins, and Great Sins/Virtues have been added (these are equivalent to the strong Sins/Virtues that some Tenets add).
 
 This has been integrated into the Steam Workshop version which can be found at:
+
 https://steamcommunity.com/sharedfiles/filedetails/?id=2871344570
 
 Uploads for Paradox Plaza can be found at:
