@@ -425,7 +425,7 @@ def main():
                                 f.write( "" + "\n")               
                     #Group Equivalent Doctrines
                     for trait_group_equivalent in trait_group_equivalents:
-                        if (not (trait_group_equivalent in trait_group_equivalent_blacklist)) and (doctrine_type == "virtue" or (not trait_group_equivalent in trait_group_equivalent_sin_blacklist)) and (doctrine_type == "sin" or (not trait_group_equivalent in trait_group_equivalent_virtue_blacklist)):
+                        if (not (trait_group_equivalent in trait_group_equivalent_blacklist)) and (doctrine_type == "virtue" or not (trait_group_equivalent in trait_group_equivalent_sin_blacklist)) and (doctrine_type == "sin" or not (trait_group_equivalent in trait_group_equivalent_virtue_blacklist)):
                             for strength in virtue_sin_strength:
                                 doctrine_name = "doctrine_" + doctrine_type+ "_" + trait_group_equivalent + strength[0][1]
                                 doctrine_opposite_name = "doctrine_" + opposite_doctrine_type(doctrine_type)+ "_" + trait_group_equivalent + strength[0][1]
