@@ -1,4 +1,4 @@
-version="1.1"
+version="1.3"
 tags={
 	"Gameplay"
 	"Warfare"
@@ -6,5 +6,5 @@ tags={
 	"Historical"
 	"Alternative History"
 }
-name="MTSAD Stand Alone"
-supported_version="1.8.1"
+name="MTSAD Stand Alone P"
+supported_version="1.9.*"

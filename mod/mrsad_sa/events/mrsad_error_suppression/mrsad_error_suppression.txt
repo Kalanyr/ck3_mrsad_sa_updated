@@ -13,7 +13,7 @@ mrsad_error_suppression.0001 = {
 mrsad_error_suppression.0002 = {
 	hidden = yes
 	immediate = {
-        	set_global_variable = {
+        set_global_variable = {
 		    name = celebrate_crimes_is_loaded
 		    value = no
 		}
