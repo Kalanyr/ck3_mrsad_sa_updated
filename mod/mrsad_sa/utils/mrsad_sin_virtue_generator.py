@@ -508,7 +508,7 @@ def main():
 
                     f.write("}"+"\n")
 
-    for language in ["english"]:
+    for language in ["english","simp_chinese"]:
         with codecs.open(os.path.join(os.path.join(localization_output_folder,language),localization_output_pre+language+localization_output_end),"w",'utf-8-sig') as f:
             #Localization
             f.write("l_" + language + ":" + "\n")
