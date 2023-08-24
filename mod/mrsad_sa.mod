@@ -7,5 +7,5 @@ tags={
 	"Alternative History"
 }
 name="MTSAD Stand Alone P"
-supported_version="1.9.*"
-path="mod/mrsad_sa"
+supported_version="1.10.*"
+path="C:/Users/timot/Documents/Paradox Interactive/Crusader Kings III/mod/mrsad_sa"
