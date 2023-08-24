@@ -8,4 +8,4 @@ tags={
 }
 name="MTSAD Stand Alone P"
 supported_version="1.10.*"
-path="C:/Users/timot/Documents/Paradox Interactive/Crusader Kings III/mod/mrsad_sa"
+path="mod/mrsad_sa"
