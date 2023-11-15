@@ -7,5 +7,5 @@ tags={
 	"Alternative History"
 }
 name="MTSAD Stand Alone P"
-supported_version="1.10.*"
+supported_version="1.11.*"
 path="mod/mrsad_sa"
