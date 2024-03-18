@@ -7,4 +7,4 @@ tags={
 	"Alternative History"
 }
 name="MTSAD Stand Alone P"
-supported_version="1.11.*"
+supported_version="1.12.*"

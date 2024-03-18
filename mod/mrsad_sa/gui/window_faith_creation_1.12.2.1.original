@@ -173,61 +173,39 @@ window = {
 					vbox = {
 						name = "tenets"
 						layoutpolicy_horizontal = expanding
-						layoutpolicy_vertical = expanding
-						spacing = 5
+						spacing = 15
 
 						text_label_center = {
 							text = "[core_tenets|E]"
 						}
 
-						
-						scrollbox = {
-							layoutpolicy_vertical = expanding
-							layoutpolicy_horizontal = expanding							
-							#margin_top = 15
-							#spacing = 10
-						
-							blockoverride "scrollbox_content"
-							{	
-								
-								fixedgridbox = {
+						hbox = {
+							name = "tenets_grid"
+							datamodel = "[FaithCreationWindow.GetGroupingHelper( 'core_tenets' ).GetGrouping]"
+							spacing = 45
 
-									name = "tenets_grid"
-									datamodel = "[FaithCreationWindow.GetGroupingHelper( 'core_tenets' ).GetGrouping]"
-									flipdirection = yes
-									addcolumn = 140
-									addrow = 210
-									setitemsizefromcell = yes
-									datamodel_wrap = 5
-									maxhorizontalslots = -1
-									maxverticalslots = 10
-									layoutpolicy_vertical = expanding
-									layoutpolicy_horizontal = expanding
+							item = {
+								button_group = {
+									datacontext = "[GuiFaithCreationDoctrineItem.GetGuiFaithDoctrineItem]"
+									datacontext = "[GuiFaithDoctrineItem.GetDoctrine]"
+									datacontext = "[GuiFaithDoctrineItem.GetFaith]"
 
-									item = {
-										button_group = {
-											datacontext = "[GuiFaithCreationDoctrineItem.GetGuiFaithDoctrineItem]"
-											datacontext = "[GuiFaithDoctrineItem.GetDoctrine]"
-											datacontext = "[GuiFaithDoctrineItem.GetFaith]"
-
-											icon = {
-												size = { 130 160 }
-												scale = 1.5
-												parentanchor = center
-												visible = "[EqualTo_int32( GuiFaithCreationDoctrineItem.GetSlotIndex, GuiFaithCreationDoctrineItem.GetFaithCreationWindow.GetDoctrineGroupWindow.GetSlotIndex ) ]"
-												texture = "gfx/portraits/portrait_glow.dds"
-												using = Color_Orange
-											}
-
-											container_tenet_item = {
-												tooltip = "FAITH_WINDOW_DOCTRINE_CHANGE_TOOLTIP"
-											}
-
-											onclick = "[GuiFaithCreationDoctrineItem.GetFaithCreationWindow.GetDoctrineGroupWindow.ShowWindowSortList( GuiFaithCreationDoctrineItem.GetSlotIndex )]"
-											onclick = "[GetVariableSystem.Set( 'faith_creation_right_view', 'doctrine_selection' )]"
-											onclick = "[GetVariableSystem.Set( 'doctrine_group_name', FaithDoctrine.GetGroup.GetName( GuiFaithDoctrineItem.GetFaith ) )]"
-										}
+									icon = {
+										size = { 130 160 }
+										scale = 1.5
+										parentanchor = center
+										visible = "[EqualTo_int32( GuiFaithCreationDoctrineItem.GetSlotIndex, GuiFaithCreationDoctrineItem.GetFaithCreationWindow.GetDoctrineGroupWindow.GetSlotIndex ) ]"
+										texture = "gfx/portraits/portrait_glow.dds"
+										using = Color_Orange
 									}
+
+									container_tenet_item = {
+										tooltip = "FAITH_WINDOW_DOCTRINE_CHANGE_TOOLTIP"
+									}
+
+									onclick = "[GuiFaithCreationDoctrineItem.GetFaithCreationWindow.GetDoctrineGroupWindow.ShowWindowSortList( GuiFaithCreationDoctrineItem.GetSlotIndex )]"
+									onclick = "[GetVariableSystem.Set( 'faith_creation_right_view', 'doctrine_selection' )]"
+									onclick = "[GetVariableSystem.Set( 'doctrine_group_name', FaithDoctrine.GetGroup.GetName( GuiFaithDoctrineItem.GetFaith ) )]"
 								}
 							}
 						}
@@ -357,64 +335,6 @@ window = {
 										}
 									}
 								}
-
-								vbox = {
-									visible = "[DataModelHasItems( FaithCreationWindow.GetGroupingHelper( 'mrsad_sins' ).GetGrouping )]"
-									layoutpolicy_horizontal = expanding
-									spacing = 10
-
-									text_label_left = {
-										layoutpolicy_horizontal = expanding
-										text = "FAITH_WINDOW_SINS"
-										default_format = "#low"
-									}
-
-									fixedgridbox = {
-										name = "doctrines_grid_sins"
-										datamodel = "[FaithCreationWindow.GetGroupingHelper( 'mrsad_sins' ).GetGrouping]"
-
-										flipdirection = yes
-										addcolumn = 300
-										addrow = 65
-
-										datamodel_wrap = 2
-										maxhorizontalslots = -1
-										maxverticalslots = 10
-
-										item = {
-											widget_doctrine_selection_item_small = {}
-										}
-									}
-								}
-
-								vbox = {
-									visible = "[DataModelHasItems( FaithCreationWindow.GetGroupingHelper( 'mrsad_virtues' ).GetGrouping )]"
-									layoutpolicy_horizontal = expanding
-									spacing = 10
-
-									text_label_left = {
-										layoutpolicy_horizontal = expanding
-										text = "FAITH_WINDOW_VIRTUES"
-										default_format = "#low"
-									}
-
-									fixedgridbox = {
-										name = "doctrines_grid_virtues"
-										datamodel = "[FaithCreationWindow.GetGroupingHelper( 'mrsad_virtues' ).GetGrouping]"
-
-										flipdirection = yes
-										addcolumn = 300
-										addrow = 65
-
-										datamodel_wrap = 2
-										maxhorizontalslots = -1
-										maxverticalslots = 10
-
-										item = {
-											widget_doctrine_selection_item_small = {}
-										}
-									}
-								}
 							}
 						}
 					}
@@ -445,11 +365,9 @@ window = {
 									}
 								}
 
-								dynamicgridbox = {
-									name = "sins_grid"
+								hbox = {
+									name = "virtues_grid"
 									datamodel = "[FaithCreationWindow.GetSins]"
-									flipdirection = yes
-									datamodel_wrap = 6
 
 									item = {
 										icon = {
@@ -492,11 +410,9 @@ window = {
 									}
 								}
 
-								dynamicgridbox = {
+								hbox = {
 									name = "virtues_grid"
 									datamodel = "[FaithCreationWindow.GetVirtues]"
-									flipdirection = yes
-									datamodel_wrap = 6
 
 									item = {
 										icon = {
@@ -906,7 +822,7 @@ window = {
 							{
 								name = "faith_name_edit"
 								ontextedited = "[FaithCreationWindow.OnEditName]"
-								maxcharacters = 100
+								maxcharacters = 30
 							}
 						}
 
@@ -924,7 +840,7 @@ window = {
 							{
 								name = "faith_adjective_edit"
 								ontextedited = "[FaithCreationWindow.OnEditAdjective]"
-								maxcharacters = 100
+								maxcharacters = 30
 							}
 
 						}
@@ -943,7 +859,7 @@ window = {
 							{
 								name = "faith_adherent_edit"
 								ontextedited = "[FaithCreationWindow.OnEditAdherent]"
-								maxcharacters = 100
+								maxcharacters = 30
 							}
 						}
 
@@ -961,7 +877,7 @@ window = {
 							{
 								name = "faith_adherent_plural_edit"
 								ontextedited = "[FaithCreationWindow.OnEditAdherentPlural]"
-								maxcharacters = 100
+								maxcharacters = 30
 							}
 						}
 
@@ -985,7 +901,7 @@ window = {
 								name = "faith_desc_edit"
 								multiline = yes
 								ontextedited = "[FaithCreationWindow.OnEditDescription]"
-								maxcharacters = 2500
+								maxcharacters = 240
 							}
 						}
 
@@ -1368,50 +1284,6 @@ types "FaithCreation"
 					elide = right
 					autoresize = no
 					fontsize_min = 12
-					align = left
-				}
-			}
-		}
-	}
-
-	type widget_doctrine_selection_item_small = button_standard_hover {
-		size = { 270 53 }
-		tooltip = "FAITH_WINDOW_DOCTRINE_CHANGE_TOOLTIP"
-		datacontext = "[GuiFaithCreationDoctrineItem.GetGuiFaithDoctrineItem]"
-		datacontext = "[GuiFaithDoctrineItem.GetDoctrine]"
-		onclick = "[GuiFaithCreationDoctrineItem.GetFaithCreationWindow.GetDoctrineGroupWindow.ShowWindow( GuiFaithCreationDoctrineItem.GetSlotIndex )]"
-		onclick = "[GetVariableSystem.Set( 'faith_creation_right_view', 'doctrine_selection' )]"
-		onclick = "[GetVariableSystem.Set( 'doctrine_group_name', FaithDoctrine.GetGroup.GetName( GuiFaithDoctrineItem.GetFaith ) )]"
-		down = "[And(GetVariableSystem.HasValue( 'doctrine_group_name', FaithDoctrine.GetGroup.GetName( GuiFaithDoctrineItem.GetFaith ) ), GetVariableSystem.HasValue( 'faith_creation_right_view', 'doctrine_selection' ))]"
-
-		background = {
-			using = Background_Area
-			margin = { 5 5 }
-		}
-
-		flowcontainer = {
-			name = "faith_list_item"
-			datacontext = "[GuiFaithDoctrineItem.GetDoctrine]"
-			spacing = 5
-			using = tooltip_nw
-			tooltip = "FAITH_WINDOW_DOCTRINE_TOOLTIP"
-
-			flowcontainer = {
-				direction = vertical
-
-				text_single = {
-					name = "doctrine_group_name"
-					text = "[FaithDoctrine.GetGroup.GetName( GuiFaithDoctrineItem.GetFaith )]"
-					align = left
-					default_format = "#low"
-				}
-
-				text_single = {
-					name = "faith_name"
-					text = "[FaithDoctrine.GetName( GuiFaithDoctrineItem.GetFaith )]"
-					datacontext = "[GuiFaithDoctrineItem.GetFaith]"
-					layoutpolicy_horizontal = expanding
-					elide = right
 					align = left
 				}
 			}

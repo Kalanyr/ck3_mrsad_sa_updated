@@ -1,5 +1,6 @@
 ﻿on_game_start = {
     on_actions = {
+      mrsad_fixes
       on_mrsad_start
     }
 }
@@ -12,4 +13,32 @@ on_mrsad_start = {
 	}
 	mrsad_virtues_sins_setup_effect = yes
     }
+}
+
+mrsad_fixes = {
+	effect = {
+		#Fix Zunism missing Sky Burial Funeral Doctrine
+		religion:zunism_religion ?= {
+			every_faith = {
+				if = {
+					#Doesn't have a non-Sky Burial Funeral Doctrine set
+					limit = {
+						NOT = { has_doctrine = doctrine_funeral_stoic }
+						NOT = { has_doctrine = doctrine_funeral_bewailment }
+						NOT = { has_doctrine = doctrine_funeral_cremation }
+						NOT = { has_doctrine = doctrine_funeral_mummification }
+					}
+					if = {
+						#Set Sky Burial if not already the doctrine
+						limit = {
+							NOT = { has_doctrine = doctrine_sky_burial }
+						
+						}
+						add_doctrine = doctrine_funeral_sky_burial
+					}
+					
+				}
+			}
+		}
+	}
 }
