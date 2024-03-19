@@ -17,24 +17,24 @@ on_mrsad_start = {
 
 mrsad_fixes = {
 	effect = {
-		#Fix Zunism missing Sky Burial Funeral Doctrine
+		#Fix Zunism missing Cremation Funeral Doctrine (for 1.12.0 - 1.12.2 )
 		religion:zunism_religion ?= {
 			every_faith = {
 				if = {
-					#Doesn't have a non-Sky Burial Funeral Doctrine set
+					#Doesn't have a non-Cremation Funeral Doctrine set
 					limit = {
 						NOT = { has_doctrine = doctrine_funeral_stoic }
 						NOT = { has_doctrine = doctrine_funeral_bewailment }
-						NOT = { has_doctrine = doctrine_funeral_cremation }
 						NOT = { has_doctrine = doctrine_funeral_mummification }
+						NOT = { has_doctrine = doctrine_funeral_sky_burial }
+
 					}
 					if = {
-						#Set Sky Burial if not already the doctrine
+						#Set Cremation if not already the doctrine
 						limit = {
-							NOT = { has_doctrine = doctrine_funeral_sky_burial }
-						
+							NOT = { has_doctrine = doctrine_funeral_cremation }						
 						}
-						add_doctrine = doctrine_funeral_sky_burial
+						add_doctrine = doctrine_funeral_cremation
 					}
 					
 				}
