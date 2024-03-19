@@ -31,7 +31,7 @@ mrsad_fixes = {
 					if = {
 						#Set Sky Burial if not already the doctrine
 						limit = {
-							NOT = { has_doctrine = doctrine_sky_burial }
+							NOT = { has_doctrine = doctrine_funeral_sky_burial }
 						
 						}
 						add_doctrine = doctrine_funeral_sky_burial
